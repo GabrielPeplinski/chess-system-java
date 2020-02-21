@@ -4,18 +4,18 @@ import boardgame.Position;
 
 public class ChessPosition {
 
-	private char row;
+	private int row;
 	private int column;
 	
-	public ChessPosition(char row, int column) {
-		if ( row < 'a' || row > 'h' || column < 1 || column > 8) {
+	public ChessPosition(char column, int row) {
+		if ( column < 'a' || column > 'h' || row < 1 || row > 8) {
 			throw new ChessException("Erro instancing ChessPosition. Valid values are from a1 to h8!");
 		}
-		this.row = row;
 		this.column = column;
+		this.row = row;
 	}
 
-	public char getRow() {
+	public int getRow() {
 		return row;
 	}
 
